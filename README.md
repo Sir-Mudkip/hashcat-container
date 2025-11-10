@@ -22,7 +22,7 @@ https://blog.roboflow.com/use-the-gpu-in-docker/
 The minimum requirements to use this version are:
  - Nvidia Drivers in this case (580)
  - Nvidia Container Toolkit
- - Optionally - Nvidia CUDA Toolkit
+ - Optionally - Nvidia CUDA Toolkit (this image is based on Nvidia's CUDA image in Ubuntu with the cuda drivers installed)
 
 If on an SElinux enabled machine, and `getenforce` is set to "enforcing" then you will need to provide the `--security-opt label=disable` argument so your container has sufficient permissions.
 
@@ -39,4 +39,7 @@ hashcat () {
   IMAGE-NAME:TAG \
   ./hashcat.bin'
 ```
-If using docker, replace podman with docker
+ - If using docker, replace podman with docker
+ - If you wish to use hashcats utils then remove ./hashcat.bin with whatever entrypoint you want.
+
+If you have modifications then please feel free to make them, or suggest them to me!
