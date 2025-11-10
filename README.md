@@ -39,3 +39,4 @@ hashcat () {
   IMAGE-NAME:TAG \
   ./hashcat.bin'
 ```
+If using docker, replace podman with docker
